@@ -22,7 +22,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Write credentials.json from secret
-        run: echo "${{ secrets.GDRIVE_CLIENT_SECRET }}" | base64 -d > credentials.json
+        run: echo '${{ secrets.GDRIVE_CLIENT_SECRET }}' > credentials.json
 
       - name: Run bot
         env:
